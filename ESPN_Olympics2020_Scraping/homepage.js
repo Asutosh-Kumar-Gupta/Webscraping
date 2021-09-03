@@ -1,8 +1,9 @@
 let request=require("request");
 let fs=require("fs");
 let cheerio=require("cheerio");
+const getOlympicsData = require("./olympicgamepage");
 
-let link="https://www.espncricinfo.com/"
+let link="https://www.espn.in/olympics/"
 request(link,cb);
 
 function cb(error,response,html){
@@ -17,5 +18,10 @@ function cb(error,response,html){
 }
 
 function parseData(html){
-    
+    // fs.writeFileSync("./espn.html",html);
+    let ch=cheerio.load(html);
+    let atag=ch(".sub-module.sub-module-medal-tracker footer a").attr("href");
+    // console.log(atag);
+    let completeLink="https://www.espn.in"+atag;
+    getOlympicsData(completeLink);
 }
