@@ -1,0 +1,24 @@
+{
+  "name": "webscraping",
+  "version": "1.0.0",
+  "description": "This project walk us through how we can extract important data from webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asutosh-Kumar-Gupta/Webscraping.git"
+  },
+  "author": "Asutosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asutosh-Kumar-Gupta/Webscraping/issues"
+  },
+  "homepage": "https://github.com/Asutosh-Kumar-Gupta/Webscraping#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
